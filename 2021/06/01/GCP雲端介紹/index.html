@@ -20,17 +20,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="什麼是雲端透過網路，共享軟硬體資源，使用者僅需付費，並且連上網路，即可享受該服務  不需維護硬體及建置網路環境 可按需購買，更好控制成本 透過網路可從任何位置存取服務  雲端服務架構 基礎設施即服務 ( Infrastructure as a Service ) 提供儲存空間、記憶體、網路等基礎硬體，使用者以量計費   平台即服務 ( Platform as a Service ) 提供執行環境或">
+<meta name="description" content="什麼是雲端所謂雲端就是建置好軟硬體、資料或是服務，透過網路，就能夠共享軟硬體資源，使用者只需連上網路，即可享受該服務，而雲端具有以下幾個好處  不需維護硬體及建置網路環境 可按需購買，更好控制成本 透過網路可從任何位置存取服務  雲端服務架構雲端提供了各式各樣的服務，可以切分成三個不同模式   基礎設施即服務 ( Infrastructure as a Service ) 提供儲存空間、記憶體、網">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GCP雲端介紹">
 <meta property="og:url" content="http://example.com/2021/06/01/GCP%E9%9B%B2%E7%AB%AF%E4%BB%8B%E7%B4%B9/index.html">
 <meta property="og:site_name" content="uccu筆記">
-<meta property="og:description" content="什麼是雲端透過網路，共享軟硬體資源，使用者僅需付費，並且連上網路，即可享受該服務  不需維護硬體及建置網路環境 可按需購買，更好控制成本 透過網路可從任何位置存取服務  雲端服務架構 基礎設施即服務 ( Infrastructure as a Service ) 提供儲存空間、記憶體、網路等基礎硬體，使用者以量計費   平台即服務 ( Platform as a Service ) 提供執行環境或">
+<meta property="og:description" content="什麼是雲端所謂雲端就是建置好軟硬體、資料或是服務，透過網路，就能夠共享軟硬體資源，使用者只需連上網路，即可享受該服務，而雲端具有以下幾個好處  不需維護硬體及建置網路環境 可按需購買，更好控制成本 透過網路可從任何位置存取服務  雲端服務架構雲端提供了各式各樣的服務，可以切分成三個不同模式   基礎設施即服務 ( Infrastructure as a Service ) 提供儲存空間、記憶體、網">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/N1VuRHQ.png">
+<meta property="og:image" content="https://i.imgur.com/HG3VIWS.png">
 <meta property="article:published_time" content="2021-06-01T07:15:38.000Z">
-<meta property="article:modified_time" content="2021-06-01T07:23:10.526Z">
+<meta property="article:modified_time" content="2021-07-02T04:01:54.216Z">
 <meta property="article:author" content="uccuz">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/N1VuRHQ.png">
 
 
 <link rel="canonical" href="http://example.com/2021/06/01/GCP%E9%9B%B2%E7%AB%AF%E4%BB%8B%E7%B4%B9/">
@@ -108,7 +111,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF%E9%9B%B2%E7%AB%AF"><span class="nav-number">1.</span> <span class="nav-text">什麼是雲端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%B2%E7%AB%AF%E6%9C%8D%E5%8B%99%E6%9E%B6%E6%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">雲端服務架構</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF%E9%9B%B2%E7%AB%AF"><span class="nav-number">1.</span> <span class="nav-text">什麼是雲端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%B2%E7%AB%AF%E6%9C%8D%E5%8B%99%E6%9E%B6%E6%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">雲端服務架構</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GCP%E4%BB%8B%E7%B4%B9"><span class="nav-number">3.</span> <span class="nav-text">GCP介紹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%81%E6%A5%AD%E4%BD%BF%E7%94%A8GCP"><span class="nav-number">3.1.</span> <span class="nav-text">企業使用GCP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E5%9E%8B%E9%96%8B%E7%99%BC%E8%80%85%E4%BD%BF%E7%94%A8GCP"><span class="nav-number">3.2.</span> <span class="nav-text">小型開發者使用GCP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%B5%90"><span class="nav-number">4.</span> <span class="nav-text">小結</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,10 +191,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-06-01 15:15:38 / Modified: 15:23:10" itemprop="dateCreated datePublished" datetime="2021-06-01T15:15:38+08:00">2021-06-01</time>
+      <time title="Created: 2021-06-01 15:15:38" itemprop="dateCreated datePublished" datetime="2021-06-01T15:15:38+08:00">2021-06-01</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-02 12:01:54" itemprop="dateModified" datetime="2021-07-02T12:01:54+08:00">2021-07-02</time>
+      </span>
 
   
 </div>
@@ -203,26 +212,36 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="什麼是雲端"><a href="#什麼是雲端" class="headerlink" title="什麼是雲端"></a>什麼是雲端</h2><p>透過網路，共享軟硬體資源，使用者僅需付費，並且連上網路，即可享受該服務</p>
+        <h2 id="什麼是雲端"><a href="#什麼是雲端" class="headerlink" title="什麼是雲端"></a>什麼是雲端</h2><p>所謂雲端就是建置好軟硬體、資料或是服務，透過網路，就能夠共享軟硬體資源，使用者只需連上網路，即可享受該服務，而雲端具有以下幾個好處</p>
 <ul>
 <li>不需維護硬體及建置網路環境</li>
 <li>可按需購買，更好控制成本</li>
 <li>透過網路可從任何位置存取服務</li>
 </ul>
-<h2 id="雲端服務架構"><a href="#雲端服務架構" class="headerlink" title="雲端服務架構"></a>雲端服務架構</h2><ul>
+<h2 id="雲端服務架構"><a href="#雲端服務架構" class="headerlink" title="雲端服務架構"></a>雲端服務架構</h2><p>雲端提供了各式各樣的服務，可以切分成三個不同模式</p>
+<p><img src="https://i.imgur.com/N1VuRHQ.png"></p>
+<ul>
 <li>基礎設施即服務 ( Infrastructure as a Service )<ul>
 <li>提供儲存空間、記憶體、網路等基礎硬體，使用者以量計費</li>
+<li>如AWS EC2、Digital Ocean提供虛擬機服務</li>
 </ul>
 </li>
 <li>平台即服務 ( Platform as a Service )<ul>
 <li>提供執行環境或開發環境，讓使用者發展自己的應用</li>
+<li>如Cloud SQL、Heroku提供資料庫以及程式部屬</li>
 </ul>
 </li>
 <li>軟體及服務 ( Software as a Service )<ul>
 <li>將軟體提供給使用者，只需連接網路就能隨時隨地使用</li>
+<li>如Google Map、Youtube</li>
 </ul>
 </li>
 </ul>
+<h2 id="GCP介紹"><a href="#GCP介紹" class="headerlink" title="GCP介紹"></a>GCP介紹</h2><p>Google Cloud Platform 是 Google 所提供的雲端服務集合，預先準備好各式服務的基本元件，讓使用者能夠快速開發應用。</p>
+<h3 id="企業使用GCP"><a href="#企業使用GCP" class="headerlink" title="企業使用GCP"></a>企業使用GCP</h3><p>以蘋果公司來說，我們使用的備份服務iCloud其實背後是用Google Cloud來運作的</p>
+<p><img src="https://i.imgur.com/HG3VIWS.png"></p>
+<h3 id="小型開發者使用GCP"><a href="#小型開發者使用GCP" class="headerlink" title="小型開發者使用GCP"></a>小型開發者使用GCP</h3><p>若需要完成小型Slide Project，GCP除了可以提供網路、運算的基本資源，也提供以作好的現成服務如資料庫、AutoML等等，讓小型開發者能輕鬆建立好使用環境，快速部屬自己的應用</p>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>今天講完了雲端的基本介紹，下一期開始將帶大家實際針對雲端的幾個服務進行操作</p>
 
     </div>
 
